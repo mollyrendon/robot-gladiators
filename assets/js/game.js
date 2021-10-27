@@ -14,8 +14,9 @@ var enemyHealth = 50;
 var enemyAttack = 12;
 
 var fight = function(enemyName) {
-
-    var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle?  Enter 'FIGHT' or 'SKIP' to choose.");
+  //repeat and execute as long as the enemy-robot is alive
+    while(enemyHealth > 0) {
+      var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle?  Enter 'FIGHT' or 'SKIP' to choose.");
     //If player choses to fight, then fight
     if (promptFight === "fight"  || promptFight === "FIGHT") {
          //Remove enemy's health by subtracting the amount set in the playerAttack variable
@@ -68,6 +69,9 @@ var fight = function(enemyName) {
     window.alert("You need to choose a valid option.  Try again!");
     }        
 };
+    }
+
+    
 }
 
 
